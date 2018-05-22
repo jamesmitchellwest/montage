@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { slide as Menu } from 'react-burger-menu'
-
+import '../assets/scss/menu.scss'
 var styles = {
   bmBurgerButton: {
     position: 'fixed',

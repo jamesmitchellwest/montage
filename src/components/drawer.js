@@ -39,11 +39,32 @@ var styles = {
 
 class Drawer extends React.Component {
 
+  constructor (props) {
+  super(props)
+  this.state = {
+    menuOpen: false
+  }
+}
+
+handleStateChange (state) {
+  this.setState({menuOpen: state.isOpen})
+}
+
+closeMenu () {
+  this.setState({menuOpen: false})
+}
+
+toggleMenu () {
+  this.setState({menuOpen: !this.state.menuOpen})
+}
+
   render () {
       return (
-        <Menu right styles={ styles }>
-            <Link to="/" style={{color: 'white'}}>Home</Link>
-            <Link to="/page-2/" style={{color: 'white'}}>About</Link>
+        <Menu right styles={ styles } isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
+
+            <Link to="/" style={{color: 'white'}} onClick={() => this.closeMenu()}>Home</Link>
+            <Link to="/page-2/" style={{color: 'white'}} onClick={() => this.closeMenu()}>About</Link>
+            <Link to="/setlist/" style={{color: 'white'}} onClick={() => this.closeMenu()}>Setlist</Link>
         </Menu>
       );
     }

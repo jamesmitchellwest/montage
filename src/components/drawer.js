@@ -63,7 +63,7 @@ toggleMenu () {
         <Menu right styles={ styles } isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
 
             <Link to="/" style={{color: 'white'}} onClick={() => this.closeMenu()}>Home</Link>
-            <Link to="/page-2/" style={{color: 'white'}} onClick={() => this.closeMenu()}>About</Link>
+            <Link to="/shows/" style={{color: 'white'}} onClick={() => this.closeMenu()}>Shows</Link>
             <Link to="/setlist/" style={{color: 'white'}} onClick={() => this.closeMenu()}>Setlist</Link>
         </Menu>
       );

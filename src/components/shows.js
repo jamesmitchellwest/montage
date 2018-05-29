@@ -1,39 +1,32 @@
 import React from 'react'
-
-
-
+import { connect } from 'react-redux';
+import { showSpinner, hideSpinner, getShows, setShows } from '../state/app';
 class Shows extends React.Component {
 
   constructor (props) {
     super(props)
-    this.state = {
-      shows: []
-    }
   }
 
 
   componentDidMount() {
-    var yesterday = new Date(Date.now() - 86400000).toISOString()
-    fetch(`https://www.googleapis.com/calendar/v3/calendars/0sa8bl67tpn9ibp6fe1ah3gclf7murdt@import.calendar.google.com/events?fields=items(summary,id,location,start)&key=AIzaSyDN1OE5ZvCa-v7AwzfK5bALAYXMXuOrNdU&singleEvents=true&orderBy=startTime&timeMin=${yesterday}`)
-    .then(response => response.json())
-    .then(data => this.setState({ shows: data.items }));
-    console.log(this.state.shows)
+    this.props.showSpinner();
+    this.props.getShows();
   }
 
   render () {
-
-
-
+    // debugger;
     return (
       <div>
       <h1>Shows</h1>
       <table className="table table-striped">
       <thead>
-      <th><h3>Location</h3></th>
-      <th><h3>Date</h3></th>
+        <tr>
+          <th colSpan="1"><h3>Location</h3></th>
+          <th colSpan="1"><h3>Date</h3></th>
+        </tr>
       </thead>
       <tbody>
-      { this.state.shows.map((show, index) => (
+      { this.props.shows && this.props.shows.map((show, index) => (
         show.location &&
         <tr key={show.id}>
         <th>{show.location}</th>
@@ -53,4 +46,15 @@ class Shows extends React.Component {
 
 
 
-export default Shows
+export default connect(
+  state => ({ spinnerShowing: state.app.spinnerShowing, shows:state.app.shows }),
+  dispatch => ({
+    getShows: () => getShows().then((data) => {
+      // debugger;
+      dispatch({type:"SET_SHOWS", payload:data.items})
+      dispatch({ type: "HIDE_SPINNER", payload: false });
+   }),
+   showSpinner: () => dispatch(showSpinner()),
+   hideSpinner: () => dispatch(hideSpinner()),
+ }),
+)(Shows);

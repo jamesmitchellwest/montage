@@ -27,16 +27,19 @@ class SongList extends React.Component {
         <h1>Setlist</h1>
         <table className="table table-striped">
           <thead>
-            <th><h3>Song</h3></th>
-            <th><h3>Artist</h3></th>
+            <tr>
+              <th colSpan="1"><h3>Song</h3></th>
+              <th colSpan="1"><h3>Artist</h3></th>
+            </tr>
           </thead>
           <tbody>
-            {songList.map(song =>
-            <tr key={song.objectID}>
-              <th>{song.title}</th>
-              <th>{song.artist}</th>
-            </tr>
-            )}
+            {songList.map((song,index) =>{
+              return (<tr key={index}>
+                <th>{song.title}</th>
+                <th>{song.artist}</th>
+              </tr>)
+            })
+                  }
           </tbody>
         </table>
       </div>

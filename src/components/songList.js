@@ -1,26 +1,19 @@
 import React from 'react'
-
-
+import { connect } from 'react-redux';
+import { showSpinner, hideSpinner, getSongs, setSongs } from '../state/app';
 
 class SongList extends React.Component {
 
   constructor (props) {
     super(props)
-    this.state = {
-      songList: []
-    }
   }
 
   componentDidMount() {
-    fetch('https://montagekc-b4268.firebaseio.com/.json')
-    .then(response => response.json())
-    .then(data => this.setState({ songList: Object.values(data) }));
-
+    this.props.showSpinner();
+    this.props.getSongs();
   }
 
   render () {
-
-    const { songList } = this.state;
 
     return (
       <div>
@@ -33,13 +26,12 @@ class SongList extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {songList.map((song,index) =>{
-              return (<tr key={index}>
+            {this.props.songs && this.props.songs.map((song,index) =>(
+              <tr key={index}>
                 <th>{song.title}</th>
                 <th>{song.artist}</th>
-              </tr>)
-            })
-                  }
+              </tr> )
+            )}
           </tbody>
         </table>
       </div>
@@ -48,6 +40,14 @@ class SongList extends React.Component {
   }
 }
 
-
-
-export default SongList
+export default connect(
+  state => ({ spinnerShowing: state.app.spinnerShowing, songs:state.app.songs }),
+  dispatch => ({
+    getSongs: () => getSongs().then((data) => {
+      dispatch({type:"SET_SONGS", payload: data})
+      dispatch({ type: "HIDE_SPINNER", payload: false });
+   }),
+   showSpinner: () => dispatch(showSpinner()),
+   hideSpinner: () => dispatch(hideSpinner()),
+ }),
+)(SongList);

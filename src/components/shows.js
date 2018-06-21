@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { showSpinner, hideSpinner, getShows, setShows } from '../state/app';
+
 class Shows extends React.Component {
 
   constructor (props) {
@@ -14,7 +15,6 @@ class Shows extends React.Component {
   }
 
   render () {
-    // debugger;
     return (
       <div>
       <h1>Shows</h1>
@@ -50,7 +50,6 @@ export default connect(
   state => ({ spinnerShowing: state.app.spinnerShowing, shows:state.app.shows }),
   dispatch => ({
     getShows: () => getShows().then((data) => {
-      // debugger;
       dispatch({type:"SET_SHOWS", payload:data.items})
       dispatch({ type: "HIDE_SPINNER", payload: false });
    }),

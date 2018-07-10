@@ -1,0 +1,28 @@
+.banner{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+.logo_img{
+padding-top:4.5rem;
+margin: 0 auto;
+}
+.background{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background: transparent;
+  z-index: -1;
+border: 0;
+font-size: 1em;
+margin: 0;
+outline: 0;
+padding: 0;
+vertical-align: baseline;
+  background-image: url('../img/konrads_montage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-attachment: fixed;
+  background-position: center center;
+}
+}

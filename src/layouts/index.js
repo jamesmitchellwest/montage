@@ -22,8 +22,8 @@ const Layout = (props) => {
       ]}
     />
 
-    <Drawer />
-    <Header siteTitle={data.site.siteMetadata.title} />
+  {/*<Drawer />
+    <Header siteTitle={data.site.siteMetadata.title} />*/}
     <div className="global_wrapper">
       {children(props)}
     </div>

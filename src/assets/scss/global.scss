@@ -1,15 +1,20 @@
 .global_wrapper{
     margin: 0 auto;
-    max-width : 960px;
-    padding: 0px 1.0875rem 1.45rem;
+    //max-width : 960px;
+    //padding: 0px 1.0875rem 1.45rem;
     padding-top : 0;
 }
 .header_wrapper{
-  margin-bottom: 1.45rem;
+  //margin-bottom: 1.45rem;
   background-color: #61dafb;
+  background-color: transparent;
+  position: fixed;
   .header_inner{
     margin: 0 auto;
-    max-width: 960px;
+    //max-width: 90%;
     padding: 1.45rem 1.0875rem;
   }
+}
+.bm-burger-bars{
+      background: #61dafb !important;
 }

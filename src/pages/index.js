@@ -10,7 +10,7 @@ const IndexPage = (props) => {
   <section className="banner">
     <div className="background"></div>
     <div className="container">
-      <div className="row">
+      <div className="img_wrap">
        <img className="logo_img img-fluid" src={require("../assets/img/montagelogo2_1.png")} />
       </div>
     </div>

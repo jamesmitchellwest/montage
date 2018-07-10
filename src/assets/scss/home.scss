@@ -6,6 +6,7 @@
     text-align: center;
 .logo_img{
 padding-top:4.5rem;
+@media (max-width: 575.98px) { padding-top:2rem; }
 }
 }
 .background{
@@ -20,9 +21,22 @@ padding: 0;
 vertical-align: baseline;
   background-image: url('../img/konrads_montage.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
   background-attachment: scroll;
-  background-attachment: fixed;
-  background-position: center center;
+  background-position: top center;
 }
+}
+.shows{
+  padding: 2rem 0;
+  h1{
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.songs{
+  padding: 2rem 0;
+  h1{
+    text-align: center;
+    text-transform: uppercase;
+  }
 }

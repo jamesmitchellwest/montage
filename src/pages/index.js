@@ -24,6 +24,23 @@ const IndexPage = (props) => {
     <SongList />
       </div>
     </section>
+    <section className="m_videos">
+      <h1>Videos</h1>
+    <div className="container">
+    <div className="row">
+    <div className="col-md-6 vid">
+    <div className="iframe_wrap">
+    <iframe className="iframe" src="https://www.youtube.com/embed/dBENIjewLFc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    </div>
+    <div className="col-md-6 vid">
+    <div className="iframe_wrap">
+    <iframe className="iframe" src="https://www.youtube.com/embed/7i7QF8Wfe0E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    </div>
+    </div>
+      </div>
+    </section>
     </div>
 
   )

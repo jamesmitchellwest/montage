@@ -1,16 +1,17 @@
 .banner{
-  height: 100vh;
+  height: 56vw;
   width: 100%;
   position: relative;
+
   .img_wrap{
     text-align: center;
 .logo_img{
 padding-top:4.5rem;
-@media (max-width: 575.98px) { padding-top:2rem; }
+@media (max-width: 575.98px) { padding-top:1.6rem; }
 }
 }
 .background{
-  height: 100vh;
+      min-height: 56vw;
   width: 100%;
   position: absolute;
   background: transparent;
@@ -23,20 +24,33 @@ vertical-align: baseline;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-attachment: scroll;
-  background-position: top center;
+  background-position: bottom center;
 }
 }
 .shows{
-  padding: 2rem 0;
+  padding: 3rem 0;
+
   h1{
     text-align: center;
     text-transform: uppercase;
   }
+  h3{text-transform: uppercase;}
 }
 .songs{
-  padding: 2rem 0;
+  padding: 3rem 0;
+  background-color: #f1f1f1;
   h1{
     text-align: center;
     text-transform: uppercase;
   }
+  h3{text-transform: uppercase;}
+  th{text-align: center;}
+}
+.m_videos{
+  padding: 3rem 0;
+  h1{
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .vid{padding-top: 1rem;}
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import SongList from '../components/songList'
 import Shows from '../components/shows'
+import Contactform from '../components/form'
 
 const IndexPage = (props) => {
   return (
@@ -41,6 +42,7 @@ const IndexPage = (props) => {
     </div>
       </div>
     </section>
+    <Contactform />
     </div>
 
   )

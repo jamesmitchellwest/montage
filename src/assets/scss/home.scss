@@ -39,6 +39,41 @@ vertical-align: baseline;
 .songs{
   padding: 3rem 0;
   background-color: #f1f1f1;
+  position: relative;
+  overflow: hidden;
+  -ms-transition: height .5s ease-in-out;
+  -webkit-transition:  height .5s ease-in-out;
+  -moz-transition:  height .5s ease-in-out;
+  -o-transition:  height .5s ease-in-out;
+  transition:  height .5s ease-in-out;
+
+  .container{
+    position: relative;
+    height: calc(100vh - 50vh);
+    -ms-transition: height .5s ease-in-out;
+    -webkit-transition:  height .5s ease-in-out;
+    -moz-transition:  height .5s ease-in-out;
+    -o-transition:  height .5s ease-in-out;
+    transition:  height .5s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .show_more_songs{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: #89dcf2;
+    cursor: pointer;
+    z-index: 1;
+  }
   h1{
     text-align: center;
     text-transform: uppercase;
@@ -53,4 +88,12 @@ vertical-align: baseline;
     text-transform: uppercase;
   }
   .vid{padding-top: 1rem;}
+}
+.contact_form{
+  padding: 3rem 0;
+  position: relative;
+  h1{
+    text-align: center;
+    text-transform: uppercase;
+  }
 }

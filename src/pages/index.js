@@ -4,6 +4,8 @@ import SongList from '../components/songList'
 import Shows from '../components/shows'
 import Contactform from '../components/form'
 
+
+
 const IndexPage = (props) => {
   return (
     <div>
@@ -21,9 +23,10 @@ const IndexPage = (props) => {
       </div>
     </section>
     <section className="songs">
-    <div className="container">
+    <div id="song_container" className="container">
     <SongList />
       </div>
+      <div id="show_more_songs" className="show_more_songs">Show All Songs</div>
     </section>
     <section className="m_videos">
       <h1>Videos</h1>
@@ -42,7 +45,13 @@ const IndexPage = (props) => {
     </div>
       </div>
     </section>
+    <section className="contact_form">
+    <h1>Contact</h1>
+    <div className="container">
     <Contactform />
+    </div>
+    </section>
+
     </div>
 
   )

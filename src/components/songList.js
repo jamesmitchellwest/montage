@@ -11,6 +11,13 @@ class SongList extends React.Component {
   componentDidMount() {
     this.props.showSpinner();
     this.props.getSongs();
+    var show_more_songs = document.getElementById("show_more_songs");
+    show_more_songs.onclick = function() {
+      var song_container = document.getElementById("song_container");
+        song_container.style.transition = 'height .5s ease-in-out';
+        song_container.style.height = '100%';
+        this.style.display = 'none';
+      };
   }
 
   render () {

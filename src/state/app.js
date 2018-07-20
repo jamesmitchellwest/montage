@@ -30,7 +30,7 @@ export const getSongs = (song) => {
   .then(response => response.json())
   .then(response => {
     hideSpinner();
-     return Object.values(response);
+     return Object.values(response.Songlist);
    })
 }
 

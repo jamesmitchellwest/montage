@@ -11,6 +11,12 @@ const IndexPage = (props) => {
     <div>
     <section className="banner">
     <div className="background"></div>
+    <ul className="list-inline social-links">
+        <li><a href="#" className="btn-social btn-outline" title="Youtube"><i class="icon ion-social-youtube"></i></a>
+        </li>
+        <li><a href="#" className="btn-social btn-outline" title="Facebook"><i class="ion ion-social-facebook"></i></a>
+        </li>
+      </ul>
     <div className="container">
     <div className="img_wrap">
     <img className="logo_img img-fluid" src={require("../assets/img/montagelogo2_1.png")} />
@@ -48,7 +54,11 @@ const IndexPage = (props) => {
     <section className="contact_form">
     <h1>Contact</h1>
     <div className="container">
+    <div className="row">
+    <div className="col-12">
     <Contactform />
+    </div>
+    </div>
     </div>
     </section>
 

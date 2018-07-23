@@ -2,11 +2,12 @@
   height: 56vw;
   width: 100%;
   position: relative;
+  text-align: center;
 
   .img_wrap{
     text-align: center;
+        margin-top: -1rem;
 .logo_img{
-padding-top:4.5rem;
 @media (max-width: 575.98px) { padding-top:1.6rem; }
 }
 }
@@ -28,7 +29,8 @@ vertical-align: baseline;
 }
 }
 .shows{
-  padding: 3rem 0;
+  padding: 3rem 0 4rem;
+      //border-top: 5px solid #c10daf;
 
   h1{
     text-align: center;
@@ -37,7 +39,7 @@ vertical-align: baseline;
   h3{text-transform: uppercase;}
 }
 .songs{
-  padding: 3rem 0;
+  padding: 3rem 0 4rem;
   background-color: #f1f1f1;
   position: relative;
   overflow: hidden;
@@ -70,7 +72,7 @@ vertical-align: baseline;
     line-height: 50px;
     text-transform: uppercase;
     font-weight: 600;
-    background-color: #89dcf2;
+    background-color: #6ee1ffe6;
     cursor: pointer;
     z-index: 1;
   }
@@ -82,7 +84,7 @@ vertical-align: baseline;
   th{text-align: center;}
 }
 .m_videos{
-  padding: 3rem 0;
+  padding: 3rem 0 4rem;
   h1{
     text-align: center;
     text-transform: uppercase;
@@ -90,9 +92,14 @@ vertical-align: baseline;
   .vid{padding-top: 1rem;}
 }
 .contact_form{
-  padding: 3rem 0;
+  padding: 3rem 0 4rem;
   position: relative;
+   background-color: rgba(9, 9, 9,0.58);
+   color:#fff;
+   input{border:none;border-radius: 0;outline:none;}
+   textarea{border:none;border-radius: 0;outline:none;}
   h1{
+    color:#fff;
     text-align: center;
     text-transform: uppercase;
   }

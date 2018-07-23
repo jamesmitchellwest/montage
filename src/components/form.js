@@ -78,14 +78,23 @@ class Contactform extends Component {
     return (
       <div>
       <form id="contact-form" onSubmit={this.submitData}>
-      <input type="text" placeholder="Name" value={this.state.name} onChange={this.inputData} name="name" />
-      <input type="email" placeholder="Email" value={this.state.email} onChange={this.inputData} name="email" />
-      <input type="textarea" placeholder="Message" value={this.state.message} onChange={this.inputData} name="message" />
-      <label>
-      Subscribe?
-      <input type="checkbox" checked={this.state.subscribe} onChange={this.inputData} name="subscribe" />
+      <div className="form-group">
+      <input className="form-control" required="" type="text" placeholder="Name" value={this.state.name} onChange={this.inputData} name="name" />
+      </div>
+      <div className="form-group">
+      <input className="form-control" required="" type="email" placeholder="Email" value={this.state.email} onChange={this.inputData} name="email" />
+      </div>
+      <div className="form-group">
+      <textarea className="form-control" required="" type="textarea" placeholder="Message" value={this.state.message} onChange={this.inputData} name="message"></textarea>
+      </div>
+      <div className="form-group">
+      <label className="d-inline">
+      <input className="form-check d-inline mr-2" type="checkbox" checked={this.state.subscribe} onChange={this.inputData} name="subscribe" />
+    SUBSCRIBE TO THE MAILING LIST
       </label>
-      <button type="submit">Submit</button>
+      </div>
+      <button className="m_btn" type="submit"> <span>Submit</span>
+  <div className="transition"></div></button>
       </form>
       </div>
     );

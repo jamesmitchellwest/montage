@@ -5,9 +5,12 @@ import { connect } from 'react-redux';
 import ReactSpinner from 'react-spinjs';
 import Header from '../components/header'
 import Drawer from '../components/drawer'
+//import '../assets/scss/custom_mixins.scss'
+//import '../assets/scss/variables.scss'
+//import "../assets/scss/scss/bootstrap-grid.scss";
+import "../assets/scss/scss/bootstrap.scss";
 import '../assets/scss/custom_mixins.scss'
 import '../assets/scss/variables.scss'
-import "../assets/scss/scss/bootstrap-grid.scss";
 import './index.scss'
 import '../assets/scss/global.scss'
 import '../assets/scss/home.scss'

@@ -4,7 +4,6 @@ var Rebase = require('re-base');
 var List = require('./List');
 var AddItem = require('./AddItem');
 
-var base = require('./rebase');
 console.log('Please change to your own firebase address in app/App.js');
 
 class Songeditor extends React.Component {
@@ -16,6 +15,7 @@ class Songeditor extends React.Component {
     };
   }
   componentDidMount() {
+var base = require('./rebase');
     this.ref = base.syncState('todoList', {
       context: this,
       state: 'list',

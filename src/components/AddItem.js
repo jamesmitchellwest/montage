@@ -2,18 +2,19 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 class AddItem extends React.Component{
-  handleSubmit(){
+  handleSubmit(e){
+    e.preventDefault()
     const newItem = {}
     newItem.name = ReactDOM.findDOMNode(this.refs.name).value
     newItem.artist = ReactDOM.findDOMNode(this.refs.artist).value
     newItem.genre = ReactDOM.findDOMNode(this.refs.genre).value
     newItem.decade = ReactDOM.findDOMNode(this.refs.decade).value
     this.props.add(newItem)
-    this.reset()
+    ReactDOM.findDOMNode(this.refs.addsongform).reset()
   }
   render(){
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
+      <form ref="addsongform" onSubmit={this.handleSubmit.bind(this)}>
         <input
         type="text"
         ref="name"

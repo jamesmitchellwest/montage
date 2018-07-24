@@ -4,7 +4,6 @@ var Rebase = require('re-base');
 var List = require('./List');
 var AddItem = require('./AddItem');
 
-console.log('Please change to your own firebase address in app/App.js');
 
 class Songeditor extends React.Component {
   constructor(props) {
@@ -41,9 +40,8 @@ var base = require('./rebase');
     return (
       <div className="container">
         <div className="row">
-          <div className="col-sm-6 col-md-offset-3">
             <div className="col-sm-12">
-              <h3 className="text-center"> re-base Todo List </h3>
+              <h3 className="text-center"> Edit Song List </h3>
               <AddItem add={this.handleAddItem.bind(this)} />
               {this.state.loading === true
                 ? <h3> LOADING... </h3>
@@ -52,7 +50,6 @@ var base = require('./rebase');
                     remove={this.handleRemoveItem.bind(this)}
                   />}
             </div>
-          </div>
         </div>
       </div>
     );

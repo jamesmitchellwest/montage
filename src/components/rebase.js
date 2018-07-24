@@ -1,7 +1,6 @@
 import Rebase from 're-base';
 import firebase from 'firebase/app';
 import 'firebase/database';
-debugger;
 var app = !firebase.apps.length ? firebase.initializeApp({
   apiKey: 'AIzaSyDN1OE5ZvCa-v7AwzfK5bALAYXMXuOrNdU',
   authDomain: 'montagekc-b4268.firebaseapp.com',

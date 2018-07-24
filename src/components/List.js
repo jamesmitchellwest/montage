@@ -24,24 +24,31 @@ class List extends React.Component{
     };
     var listItems = this.props.items.map((item, index) => {
       return (
-        <li key={index} className="list-group-item" style={styles.listGroup}>
-          <button
-            className="glyphicon glyphicon-remove"
-            style={styles.removeItem}
-            onClick={this.props.remove.bind(null, index)}
-          />
-          <span style={styles.todoItem}>
-            {item.name}
-          </span>
-        </li>
+
+          <tr>
+            <td>{item.name}</td>
+            <td>{item.artist}</td>
+            <td>{item.genre}</td>
+            <td>{item.decade}</td>
+            <td>
+              <button onClick={this.props.remove.bind(null, index)}>
+                Delete Song
+              </button>
+            </td>
+          </tr>
+
       )
     });
     return (
-      <div className="col-sm-12">
-        <ul className="list-group">
+      <table>
+      <tr>
+        <th>song</th>
+        <th>artist</th>
+        <th>genre</th>
+        <th>decade</th>
+      </tr>
           {listItems}
-        </ul>
-      </div>
+      </table>
     )
   }
 };

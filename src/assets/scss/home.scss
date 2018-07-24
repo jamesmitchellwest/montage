@@ -3,12 +3,21 @@
   width: 100%;
   position: relative;
   text-align: center;
-
+.social-links{
+  @media (max-width: 575.98px) { display: none;}
+}
   .img_wrap{
     text-align: center;
         margin-top: -1rem;
+        @media (max-width: 575.98px) {
+            margin: 0;
+            position: absolute;
+  bottom: 0;
+  left: 0;
+ }
 .logo_img{
-@media (max-width: 575.98px) { padding-top:1.6rem; }
+@media (max-width: 575.98px) { padding: 0;
+    margin: 0; }
 }
 }
 .background{
@@ -39,7 +48,6 @@ vertical-align: baseline;
   h3{text-transform: uppercase;}
 }
 .songs{
-  padding: 3rem 0 4rem;
   background-color: #f1f1f1;
   position: relative;
   overflow: hidden;
@@ -48,10 +56,14 @@ vertical-align: baseline;
   -moz-transition:  height .5s ease-in-out;
   -o-transition:  height .5s ease-in-out;
   transition:  height .5s ease-in-out;
-
-  .container{
+.container{
+  position:relative;
+}
+  #song_container{
+    padding: 3rem 15px 4rem;
     position: relative;
     height: calc(100vh - 50vh);
+    height: 600px;
     -ms-transition: height .5s ease-in-out;
     -webkit-transition:  height .5s ease-in-out;
     -moz-transition:  height .5s ease-in-out;
@@ -102,5 +114,46 @@ vertical-align: baseline;
     color:#fff;
     text-align: center;
     text-transform: uppercase;
+  }
+}
+.footer{
+  overflow: hidden;
+background: #090909;
+  .social-links{
+    .btn-outline {
+      margin-top: 1rem;
+     border: solid 3px #4bdaff;
+     font-size: 22px;
+     color: #fff;
+     background: #4bdaff;
+     transition: all .3s ease-in-out;
+     @media (max-width: 575.98px) {font-size: 14px;margin-top: .5rem;}
+    }
+    .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+      border: solid 3px #fff;
+      color: #fff;
+      background: 0 0;
+      text-decoration: none;
+
+    }
+
+    .btn-social {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      border: 3px solid #4bdaff;
+      border-radius: 100%;
+      text-align: center;
+      font-size: 22px;
+      line-height: 44px;
+      text-decoration: none;
+      @media (max-width: 575.98px) {
+        font-size: 14px;
+        width: 30px;
+        height: 30px;
+        line-height: 26px;
+       }
+
+    }
   }
 }

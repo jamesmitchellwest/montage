@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { showSpinner, hideSpinner, getShows, setShows } from '../state/app';
-
+import moment from 'moment'
 class Shows extends React.Component {
 
   constructor (props) {
@@ -29,8 +29,8 @@ class Shows extends React.Component {
       { this.props.shows && this.props.shows.map((show, index) => (
         show.location &&
         <tr key={show.id}>
-        <th>{show.location}</th>
-        <th>{show.start.date || show.start.dateTime.slice(0, 10)}</th>
+        <th><a href={"http://maps.google.com/?q=" + show.location} target="_blank">{show.location}</a></th>
+        <th>{moment(show.start.date).format('MM/DD/YYYY') || moment(show.start.dateTime).format('MM/DD/YYYY')}</th>
         </tr> )
       )}
 

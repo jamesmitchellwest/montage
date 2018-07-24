@@ -14,9 +14,15 @@ class SongList extends React.Component {
     var show_more_songs = document.getElementById("show_more_songs");
     show_more_songs.onclick = function() {
       var song_container = document.getElementById("song_container");
-        song_container.style.transition = 'height .5s ease-in-out';
-        song_container.style.height = '100%';
-        this.style.display = 'none';
+      if(song_container.style.height != 'auto'){
+        song_container.style.transition = 'all .5s ease-in-out';
+        song_container.style.height = 'auto';
+        this.innerText  = 'Show Less Songs';
+      }else{
+        song_container.style.transition = 'all .5s ease-in-out';
+        song_container.style.height = '600px';
+        this.innerText  = 'Show All Songs';
+      }
       };
   }
 

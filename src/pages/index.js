@@ -32,7 +32,9 @@ const IndexPage = (props) => {
     <div id="song_container" className="container">
     <SongList />
       </div>
+      <div className="container">
       <div id="show_more_songs" className="show_more_songs">Show All Songs</div>
+      </div>
     </section>
     <section className="m_videos">
       <h1>Videos</h1>
@@ -61,6 +63,14 @@ const IndexPage = (props) => {
     </div>
     </div>
     </section>
+      <section className="footer">
+      <ul className="list-inline social-links text-center">
+      <li><a href="https://www.facebook.com/montagekc/" className="btn-social btn-outline" title="Facebook"><span className="icon-facebook"></span></a>
+      </li>
+          <li><a href="https://www.youtube.com/channel/UC-5g9WInfE6VSGnkQ307Ozg/" className="btn-social btn-outline" title="Youtube"><span className="icon-youtube"></span></a>
+          </li>
+        </ul>
+      </section>
 
     </div>
 

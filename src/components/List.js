@@ -25,7 +25,7 @@ class List extends React.Component{
     var listItems = this.props.items.map((item, index) => {
       return (
 
-          <tr>
+          <tr key={index}>
             <td>{item.name}</td>
             <td>{item.artist}</td>
             <td>{item.genre}</td>
@@ -41,13 +41,17 @@ class List extends React.Component{
     });
     return (
       <table>
+      <thead>
       <tr>
         <th>song</th>
         <th>artist</th>
         <th>genre</th>
         <th>decade</th>
       </tr>
+      </thead>
+      <tbody>
           {listItems}
+      </tbody>
       </table>
     )
   }

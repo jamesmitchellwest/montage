@@ -14,6 +14,7 @@ import '../assets/scss/variables.scss'
 import './index.scss'
 import '../assets/scss/global.scss'
 import '../assets/scss/home.scss'
+import '../assets/fonts/icons/style.scss'
 
 
 

@@ -12,9 +12,9 @@ const IndexPage = (props) => {
     <section className="banner">
     <div className="background"></div>
     <ul className="list-inline social-links">
-        <li><a href="#" className="btn-social btn-outline" title="Youtube"><i class="icon ion-social-youtube"></i></a>
-        </li>
-        <li><a href="#" className="btn-social btn-outline" title="Facebook"><i class="ion ion-social-facebook"></i></a>
+    <li><a href="https://www.facebook.com/montagekc/" className="btn-social btn-outline" title="Facebook"><span className="icon-facebook"></span></a>
+    </li>
+        <li><a href="https://www.youtube.com/channel/UC-5g9WInfE6VSGnkQ307Ozg/" className="btn-social btn-outline" title="Youtube"><span className="icon-youtube"></span></a>
         </li>
       </ul>
     <div className="container">

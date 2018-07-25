@@ -30,9 +30,10 @@ class List extends React.Component{
             <td>{item.artist}</td>
             <td>{item.genre}</td>
             <td>{item.decade}</td>
-            <td>
-              <button onClick={this.props.remove.bind(null, index)}>
-                Delete Song
+            <td style={{width: '20%'}}>
+              <button className="m_btn" onClick={this.props.remove.bind(null, index)}>
+                <span>Delete Song</span>
+                <div className="transition"></div>
               </button>
             </td>
           </tr>

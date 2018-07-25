@@ -35,7 +35,10 @@ class AddItem extends React.Component{
         ref="decade"
         className="form-control"
         placeholder="Decade" />
-        <button type="submit">Add Song</button>
+        <button className="m_btn my-4" type="submit">
+          <span>Add Song</span>
+          <div className="transition"></div>
+        </button>
       </form>
 
     )

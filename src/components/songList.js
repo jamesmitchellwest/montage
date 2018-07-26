@@ -36,13 +36,17 @@ class SongList extends React.Component {
             <tr>
               <th colSpan="1"><h3>Song</h3></th>
               <th colSpan="1"><h3>Artist</h3></th>
+              <th colSpan="1"><h3>Decade</h3></th>
+              <th colSpan="1"><h3>Genre</h3></th>
             </tr>
           </thead>
           <tbody>
             {this.props.songs && this.props.songs.map((song,index) =>(
               <tr key={index}>
-                <th>{song.title}</th>
+                <th>{song.name}</th>
                 <th>{song.artist}</th>
+                <th>{song.decade}</th>
+                <th>{song.genre}</th>
               </tr> )
             )}
           </tbody>

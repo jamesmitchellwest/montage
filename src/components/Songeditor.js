@@ -15,7 +15,7 @@ class Songeditor extends React.Component {
   }
   componentDidMount() {
 var base = require('./rebase');
-    this.ref = base.syncState('todoList', {
+    this.ref = base.syncState('song_list', {
       context: this,
       state: 'list',
       asArray: true,

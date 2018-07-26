@@ -25,21 +25,25 @@ class AddItem extends React.Component{
         ref="artist"
         className="form-control"
         placeholder="Artist" />
-        <input
-        type="text"
-        ref="genre"
-        className="form-control"
-        placeholder="Genre" />
-        <input
-        type="text"
-        ref="decade"
-        className="form-control"
-        placeholder="Decade" />
+        <select className="form-control" ref="genre">
+          <option value="Rock">Rock</option>
+          <option value="Pop">Pop</option>
+          <option value="Country">Country</option>
+        </select>
+        <select className="form-control" ref="decade">
+          <option value="60s">60s</option>
+          <option value="70s">70s</option>
+          <option value="80s">80s</option>
+          <option value="90s">90s</option>
+          <option value="00s">00s</option>
+          <option value="10s">10s</option>
+        </select>
         <button className="m_btn my-4" type="submit">
           <span>Add Song</span>
           <div className="transition"></div>
         </button>
       </form>
+
 
     )
   }

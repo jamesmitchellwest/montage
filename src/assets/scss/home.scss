@@ -71,7 +71,15 @@ vertical-align: baseline;
     transition:  height .5s ease-in-out;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-      @media (max-width: 575.98px) {   table{    font-size: 80%;}}
+      @media (max-width: 575.98px) {
+         table{
+           font-size: 75%;
+th{padding:.5rem;}
+h3{
+  font-size: .8rem;
+}
+         }
+       }
 
   }
 

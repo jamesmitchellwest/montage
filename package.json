@@ -7,7 +7,7 @@
     "emotion": "^9.0.0",
     "emotion-server": "^9.0.0",
     "emotion-theming": "^9.0.0",
-    "firebase": "^5.2.0",
+    "firebase": "^4.13.1",
     "gatsby": "^1.9.158",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-react-helmet": "^2.0.3",

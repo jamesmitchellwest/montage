@@ -22,8 +22,10 @@ class SongList extends React.Component {
         song_container.style.transition = 'all .5s ease-in-out';
         song_container.style.height = '600px';
         this.innerText  = 'Show All Songs';
+        song_container.scrollIntoView({behavior: "smooth"});
       }
       };
+
   }
 
   render () {
@@ -34,17 +36,21 @@ class SongList extends React.Component {
         <table className="table table-striped">
           <thead>
             <tr>
-              <th colSpan="1"><h3>Song</h3></th>
               <th colSpan="1"><h3>Artist</h3></th>
+              <th colSpan="1"><h3>Song</h3></th>
               <th colSpan="1"><h3>Decade</h3></th>
               <th colSpan="1"><h3>Genre</h3></th>
             </tr>
           </thead>
           <tbody>
-            {this.props.songs && this.props.songs.map((song,index) =>(
-              <tr key={index}>
-                <th>{song.name}</th>
+            {this.props.songs && [].concat(this.props.songs).sort(function(a, b) {
+          var textA = a.artist.toUpperCase();
+          var textB = b.artist.toUpperCase();
+          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+      }).map((song,i) =>(
+              <tr key={i}>
                 <th>{song.artist}</th>
+                <th>{song.name}</th>
                 <th>{song.decade}</th>
                 <th>{song.genre}</th>
               </tr> )

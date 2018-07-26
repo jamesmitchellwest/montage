@@ -30,7 +30,7 @@ class Shows extends React.Component {
         show.location &&
         <tr key={show.id}>
         <th><a href={"http://maps.google.com/?q=" + show.location} target="_blank">{show.location}</a></th>
-        <th>{moment(show.start.date).format('MM/DD/YYYY') || moment(show.start.dateTime).format('MM/DD/YYYY')}</th>
+        <th>{moment(show.start.date || show.start.dateTime).format('MM/DD/YYYY')}</th>
         </tr> )
       )}
 

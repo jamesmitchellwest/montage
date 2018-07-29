@@ -3,6 +3,9 @@ var ReactDOM = require('react-dom');
 var Rebase = require('re-base');
 var List = require('./List');
 var AddItem = require('./AddItem');
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import { push } from "gatsby-link";
 
 
 class Songeditor extends React.Component {
@@ -14,6 +17,11 @@ class Songeditor extends React.Component {
     };
   }
   componentDidMount() {
+    firebase.auth().onAuthStateChanged(function(user) {
+    if (!user) {
+      push('/login')
+    }
+  });
 var base = require('./rebase');
     this.ref = base.syncState('song_list', {
       context: this,

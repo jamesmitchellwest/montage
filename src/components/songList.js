@@ -25,11 +25,9 @@ class SongList extends React.Component {
         song_container.scrollIntoView({behavior: "smooth"});
       }
       };
-
   }
-
   render () {
-
+    const {sortValue} = this.props;
     return (
       <div>
         <h1>Setlist</h1>
@@ -44,16 +42,17 @@ class SongList extends React.Component {
           </thead>
           <tbody>
             {this.props.songs && [].concat(this.props.songs).sort(function(a, b) {
-          var textA = a.artist.toUpperCase();
-          var textB = b.artist.toUpperCase();
+          var textA = a[sortValue].toUpperCase();
+          var textB = b[sortValue].toUpperCase();
           return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-      }).map((song,i) =>(
+      }).map((song,i) =>{
+        return(
               <tr key={i}>
                 <th>{song.artist}</th>
                 <th>{song.name}</th>
                 <th>{song.decade}</th>
                 <th>{song.genre}</th>
-              </tr> )
+              </tr> )}
             )}
           </tbody>
         </table>

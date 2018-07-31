@@ -38,7 +38,7 @@ class IndexPage extends React.Component {
     <div id="song_container" className="container">
     <select name="select" onChange={(e)=>{ this.setState({sortValue:e.target.value}); }}>
       <option value='artist' selected={this.state.sortValue === 'artist'}>sort by artist</option>
-      <option value='song' selected={this.state.sortValue === 'song'}>sort by song</option>
+      <option value='name' selected={this.state.sortValue === 'name'}>sort by song</option>
       <option value='decade' selected={this.state.sortValue === 'decade'}>sort by decade</option>
       <option value='genre' selected={this.state.sortValue === 'genre'}>sort by genre</option>
     </select>

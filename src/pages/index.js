@@ -12,7 +12,7 @@ class IndexPage extends React.Component {
     super(props)
     this.state = {};
   }
-  render() { 
+  render() {
   return (
     <div>
     <section className="banner">
@@ -36,17 +36,9 @@ class IndexPage extends React.Component {
     </section>
     <section className="songs">
     <div id="song_container" className="container">
-    <select name="select" onChange={(e)=>{ this.setState({sortValue:e.target.value}); }}>
-      <option value='artist' selected={this.state.sortValue === 'artist'}>sort by artist</option>
-      <option value='name' selected={this.state.sortValue === 'name'}>sort by song</option>
-      <option value='decade' selected={this.state.sortValue === 'decade'}>sort by decade</option>
-      <option value='genre' selected={this.state.sortValue === 'genre'}>sort by genre</option>
-    </select>
-    <SongList sortValue={this.state.sortValue || 'artist'} />
-      </div>
-      <div className="container">
-      <div id="show_more_songs" className="show_more_songs">Show All Songs</div>
-      </div>
+    <h1>Setlist</h1>
+    <iframe src="https://open.spotify.com/embed/user/youngwestman/playlist/4MD2q9eW1PZPEpbP8unk9Y" width="100%" height="450" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
     </section>
     <section className="m_videos">
       <h1>Videos</h1>

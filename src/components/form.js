@@ -11,7 +11,7 @@ const config = {
   storageBucket: 'montagekc-b4268.appspot.com',
   messagingSenderId: '316642690142',
 };
-firebase.initializeApp(config);
+
 
 class Contactform extends Component {
   constructor(props) {
@@ -28,6 +28,7 @@ class Contactform extends Component {
   }
 
   componentDidMount() {
+    firebase.initializeApp(config);
     firebase
     .database()
     .ref(`Formdata/${this.state.uid}`)

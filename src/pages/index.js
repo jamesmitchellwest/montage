@@ -33,7 +33,7 @@ const IndexPage = () => (
     <section className="songs">
     <div id="song_container" className="container">
     <h1>Setlist</h1>
-    <iframe src="https://open.spotify.com/embed/user/youngwestman/playlist/4MD2q9eW1PZPEpbP8unk9Y" width="100%" height="450" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe src="https://open.spotify.com/embed/user/youngwestman/playlist/4MD2q9eW1PZPEpbP8unk9Y" width="100%" height="450" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
     </section>
     <section className="m_videos">

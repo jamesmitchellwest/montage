@@ -6,7 +6,7 @@
 
   .social-links {
     @media (max-width: 575.98px) {
-      display: none;
+      text-align: right;
     }
   }
 
@@ -49,7 +49,107 @@
 
 .shows {
   padding: 2rem 0 4rem;
+
+  .container {
+    position: relative;
+  }
+
+  .table {
+    position: relative;
+    border: none;
+
+  }
+
+  .table th,
+  .table td {
+    text-align: left;
+    border: none;
+  }
+
+  tr {
+    display: flex;
+    flex-direction: row;
+    //flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-between;
+    border: none;
+
+    th {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    th+th {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    td {
+      flex: 1;
+    }
+  }
+
+
+
   //border-top: 5px solid #c10daf;
+  #shows_container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    //height: calc(100vh - 50vh);
+    //max-height: 600px;
+    -ms-transition: height .6s ease-in-out;
+    -webkit-transition: height .6s ease-in-out;
+    -moz-transition: height .6s ease-in-out;
+    -o-transition: height .6s ease-in-out;
+    transition: height .6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    height: auto;
+
+    @media (max-width: 575.98px) {
+      table {
+        font-size: 75%;
+
+        th {
+          padding: .5rem;
+        }
+
+        h3 {
+          font-size: .8rem;
+        }
+      }
+    }
+
+  }
+
+  .show_more_shows {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    //height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    //line-height: 50px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: #6ee1fff0;
+    color: #fff;
+    letter-spacing: .1rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    z-index: 1;
+
+    tr {
+      display: inline-block;
+
+      .showbtntext {
+        border: none;
+      }
+    }
+  }
 
   h1 {
     text-align: center;
@@ -181,6 +281,7 @@
 .footer {
   overflow: hidden;
   background: #090909;
+  padding: .5rem 0 1rem;
 
   .social-links {
     .btn-outline {

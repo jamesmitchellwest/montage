@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 const firebase = require('firebase');
 const uuid = require('uuid');
-const moment = require('moment');
+//const moment = require('moment');
 
 const config = {
   apiKey: 'AIzaSyDN1OE5ZvCa-v7AwzfK5bALAYXMXuOrNdU',

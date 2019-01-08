@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+//import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -21,7 +21,7 @@ const IndexPage = () => (
       </ul>
     <div className="container">
     <div className="img_wrap">
-    <img className="logo_img img-fluid" src={require("../assets/img/montagelogo2_1.png")} />
+    <img alt="Montage" className="logo_img img-fluid" src={require("../assets/img/montagelogo2_1.png")} />
     </div>
     </div>
     </section>
@@ -33,7 +33,7 @@ const IndexPage = () => (
     <section className="songs">
     <div id="song_container" className="container">
     <h1>Setlist</h1>
-    <iframe src="https://open.spotify.com/embed/user/youngwestman/playlist/4MD2q9eW1PZPEpbP8unk9Y" width="100%" height="450" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe title="Montage Setlist" src="https://open.spotify.com/embed/user/youngwestman/playlist/4MD2q9eW1PZPEpbP8unk9Y" width="100%" height="450" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
     </section>
     <section className="m_videos">
@@ -42,12 +42,12 @@ const IndexPage = () => (
     <div className="row">
     <div className="col-md-6 vid">
     <div className="iframe_wrap">
-    <iframe className="iframe" src="https://www.youtube.com/embed/dBENIjewLFc" frameBorder="0" allowFullScreen></iframe>
+    <iframe title="My Hero" className="iframe" src="https://www.youtube.com/embed/dBENIjewLFc" frameBorder="0" allowFullScreen></iframe>
     </div>
     </div>
     <div className="col-md-6 vid">
     <div className="iframe_wrap">
-    <iframe className="iframe" src="https://www.youtube.com/embed/7i7QF8Wfe0E" frameBorder="0" allowFullScreen></iframe>
+    <iframe title="Tom Sawyer" className="iframe" src="https://www.youtube.com/embed/7i7QF8Wfe0E" frameBorder="0" allowFullScreen></iframe>
     </div>
     </div>
     </div>

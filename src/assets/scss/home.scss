@@ -13,12 +13,16 @@
   .img_wrap {
     text-align: center;
     margin-top: -1rem;
+    margin: auto;
+    max-width: 740px;
 
     @media (max-width: 575.98px) {
       margin: 0;
       position: absolute;
       bottom: 0;
       left: 0;
+      width: 100%;
+
     }
 
     .logo_img {
@@ -39,7 +43,7 @@
     margin: 0;
     padding: 0;
     vertical-align: baseline;
-    background-image: url('../img/konrads_montage.jpg');
+    //background-image: url('../img/konrads_montage.jpg');
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-attachment: scroll;

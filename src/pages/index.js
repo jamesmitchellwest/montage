@@ -100,7 +100,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    montageLogo: file(relativePath: { eq: "montagelogo2_1.png" }) {
+    montageLogo: file(relativePath: { eq: "MONTAGE_LOGO_PNG.png" }) {
       childImageSharp {
         fluid(maxWidth: 740) {
           ...GatsbyImageSharpFluid

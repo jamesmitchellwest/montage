@@ -12,7 +12,8 @@ const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" keywords={['montage', 'band', 'kc', 'kansas city' ]} />
     <div>
-    <section className="banner">
+    <section className="banner d-flex flex-column justify-content-center">
+    {props.data.montageBG && (
     <Img 
     className=""
     style={{
@@ -29,21 +30,24 @@ const IndexPage = (props) => (
       backgroundRepeat: 'no-repeat',
       backgroundSize: '100% auto',
       backgroundAttachment: 'scroll',
-      backgroundPosition: 'bottom center'
+      backgroundPosition: 'bottom center',
+      WebkitFilter: 'brightness(0.25)',
+      filter: 'brightness(0.25)',
     }}
      fluid={props.data.montageBG.childImageSharp.fluid}
       />
-    <ul className="list-inline social-links">
+    )}
+    <div className="container">
+    <div className="img_wrap logo_img img-fluid">
+    {props.data.montageLogo && (<Img className="logo_img img-fluid" fluid={props.data.montageLogo.childImageSharp.fluid} />)}
+    </div>
+    </div>
+    <ul className="list-inline social-links mb-3">
     <li><a href="https://www.facebook.com/montagekc/" className="btn-social btn-outline" title="Facebook"><span className="icon-facebook"></span></a>
     </li>
         <li><a href="https://www.youtube.com/channel/UC-5g9WInfE6VSGnkQ307Ozg/" className="btn-social btn-outline" title="Youtube"><span className="icon-youtube"></span></a>
         </li>
       </ul>
-    <div className="container">
-    <div className="img_wrap logo_img img-fluid">
-    <Img className="logo_img img-fluid" fluid={props.data.montageLogo.childImageSharp.fluid} />
-    </div>
-    </div>
     </section>
     <section className="shows">
     <div className="container">
@@ -53,7 +57,7 @@ const IndexPage = (props) => (
     <section className="songs">
     <div id="song_container" className="container">
     <h1>Setlist</h1>
-    <iframe title="Montage Setlist" src="https://open.spotify.com/embed/playlist/4MD2q9eW1PZPEpbP8unk9Y" width="100%" height="450" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe title="Montage Setlist" src="https://open.spotify.com/embed/playlist/4MD2q9eW1PZPEpbP8unk9Y" width="100%" height="450" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
     </section>
     <section className="m_videos">
@@ -108,7 +112,7 @@ export const pageQuery = graphql`
         }
       }
     },
-    montageBG: file(relativePath: { eq: "konrads_montage.jpg" }) {
+    montageBG: file(relativePath: { eq: "montage_collage.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2500) {
           ...GatsbyImageSharpFluid_tracedSVG

@@ -21,8 +21,8 @@ module.exports = {
         name: 'montage-band-site',
         short_name: 'montage',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#005369',
+        theme_color: '#005369',
         display: 'minimal-ui',
         icon: 'src/assets/img/montagefavicon.png', // This path is relative to the root of the site.
       },

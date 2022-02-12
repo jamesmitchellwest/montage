@@ -1,6 +1,8 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  //font-family: 'Open Sans';
+  font-family: 'Poppins', sans-serif;
   margin: 0;
 }
 
@@ -62,6 +64,7 @@ h4,
 h5,
 h6 {
   color: #191919;
+  font-family: Oceanshore W00 Regular;
 }
 
 button,
@@ -116,10 +119,10 @@ button:hover {
   border-radius: 0px;
   position: relative;
   overflow: hidden !important;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   background: transparent !important;
   outline: none;
   z-index: 1;
@@ -187,11 +190,11 @@ button:hover {
   font-size: 22px;
   color: #fff;
   background: #005369;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   @media (max-width: 575.98px) {
     font-size: 14px;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -203,7 +206,6 @@ button:hover {
   color: #4bdaff;
   background: 0 0;
   text-decoration: none;
-
 }
 
 .btn-social {
@@ -223,10 +225,7 @@ button:hover {
     height: 30px;
     line-height: 26px;
   }
-
 }
-
-
 
 .list-inline {
   padding-left: 0;
@@ -234,7 +233,7 @@ button:hover {
   margin-left: -7px;
 }
 
-.list-inline>li {
+.list-inline > li {
   display: inline-block;
   padding-left: 7px;
   padding-right: 7px;

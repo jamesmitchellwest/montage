@@ -13,30 +13,7 @@ const IndexPage = (props) => (
     <SEO title="Home" keywords={['montage', 'band', 'kc', 'kansas city' ]} />
     <div>
     <section className="banner d-flex flex-column justify-content-center">
-    {props.data.montageBG && (
-    <Img 
-    className=""
-    style={{
-      minHeight: '56vw',
-      maxHeight: '56vw',
-      width: '100%',
-      position: 'absolute',
-      background: 'transparent',
-      zIndex: -1,
-      fontSize: '1em',
-      margin: 0,
-      padding: 0,
-      verticalAlign: 'baseline',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: '100% auto',
-      backgroundAttachment: 'scroll',
-      backgroundPosition: 'bottom center',
-      WebkitFilter: 'brightness(0.25)',
-      filter: 'brightness(0.25)',
-    }}
-     fluid={props.data.montageBG.childImageSharp.fluid}
-      />
-    )}
+    {props.data.montageBG && (<Img className="heroBG"  style={{ position: 'absolute'}} fluid={props.data.montageBG.childImageSharp.fluid} />)}
     <div className="container">
     <div className="img_wrap logo_img img-fluid">
     {props.data.montageLogo && (<Img className="logo_img img-fluid" fluid={props.data.montageLogo.childImageSharp.fluid} />)}

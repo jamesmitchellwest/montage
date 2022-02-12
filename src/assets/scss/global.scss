@@ -1,4 +1,13 @@
-body {
+@font-face {
+  font-family: "Oceanshore";
+  src:local('Oceanshore'), url("../../fonts/oceanshore/6584d96175eee3d585226df75af3b4bb.eot"); /* IE9*/
+  src: local('Oceanshore'), url("../../fonts/oceanshore/6584d96175eee3d585226df75af3b4bb.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../../fonts/oceanshore/6584d96175eee3d585226df75af3b4bb.woff2") format("woff2"), /* chrome、firefox */
+  url("../../fonts/oceanshore/6584d96175eee3d585226df75af3b4bb.woff") format("woff"), /* chrome、firefox */
+  url("../../fonts/oceanshore/6584d96175eee3d585226df75af3b4bb.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../../fonts/oceanshore/6584d96175eee3d585226df75af3b4bb.svg#Oceanshore") format("svg"); /* iOS 4.1- */
+}
+.body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   //font-family: 'Open Sans';
@@ -64,7 +73,7 @@ h4,
 h5,
 h6 {
   color: #191919;
-  font-family: Oceanshore W00 Regular;
+  font-family: "Oceanshore";
 }
 
 button,

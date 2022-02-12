@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import "@fontsource/poppins"
-import '../assets/scss/layout.scss'
 import '../assets/scss/scss/bootstrap.scss'
-import '../assets/scss/home.scss'
+import '../assets/scss/layout.scss'
 import '../assets/scss/global.scss'
+import '../assets/scss/home.scss'
 import '../assets/scss/custom_mixins.scss'
 import '../assets/scss/variables.scss'
 import '../assets/scss/menu.scss'

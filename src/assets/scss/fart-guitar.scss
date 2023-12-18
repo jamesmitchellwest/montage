@@ -1,0 +1,31 @@
+.banner {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  @media (max-width: 1025px) {
+    height: 56vw;
+  }
+
+  .guitarimg_wrap {
+    text-align: center;
+    margin-top: -1rem;
+    margin: auto;
+    max-width: 740px;
+    cursor: pointer;
+    @media (max-width: 575.98px) {
+      // margin: 0;
+      // position: absolute;
+      //bottom: 0;
+      // left: 0;
+      width: 80%;
+    }
+
+    .logo_img {
+      @media (max-width: 575.98px) {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}

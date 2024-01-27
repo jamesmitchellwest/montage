@@ -37,7 +37,7 @@ const IndexPage = props => (
               className="btn-social btn-outline"
               title="Facebook"
               target="_blank"
-
+              rel="noreferrer"
             >
               <span className="icon-facebook"></span>
             </a>
@@ -48,6 +48,7 @@ const IndexPage = props => (
               className="btn-social btn-outline"
               title="Youtube"
               target="_blank"
+              rel="noreferrer"
 
             >
               <span className="icon-youtube"></span>
@@ -59,6 +60,7 @@ const IndexPage = props => (
               className="btn-social btn-outline"
               title="Email Montage!"
               target="_blank"
+              rel="noreferrer"
             >
               <span className="icon-envelope"></span>
             </a>
@@ -131,6 +133,9 @@ const IndexPage = props => (
               href="https://www.facebook.com/montagekc/"
               className="btn-social btn-outline"
               title="Facebook"
+              rel="noreferrer"
+              target="_blank"
+
             >
               <span className="icon-facebook"></span>
             </a>
@@ -140,6 +145,9 @@ const IndexPage = props => (
               href="https://www.youtube.com/channel/UC-5g9WInfE6VSGnkQ307Ozg/"
               className="btn-social btn-outline"
               title="Youtube"
+              rel="noreferrer"
+              target="_blank"
+
             >
               <span className="icon-youtube"></span>
             </a>
@@ -150,6 +158,7 @@ const IndexPage = props => (
               className="btn-social btn-outline"
               title="Email Montage!"
               target="_blank"
+              rel="noreferrer"
             >
               <span className="icon-envelope"></span>
             </a>
